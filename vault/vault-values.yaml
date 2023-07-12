@@ -1,21 +1,13 @@
+# vault-values.yaml
 server:
   affinity: ""
   ha:
     enabled: true
+    replicas: 6
     raft: 
       enabled: true   
   image:
     repository: hashicorp/vault-enterprise
-    tag: 1.12.0-ent
+    tag: 1.11.2-ent
   enterpriseLicense:
     secretName: vault-ent-license
-  service:
-    enabled: true
-    type: "LoadBalancer"
-ui:
-  activeVaultPodOnly: false
-  serviceType: "LoadBalancer"
-  serviceNodePort: null
-  externalPort: 8200
-
-
