@@ -13,6 +13,12 @@ server:
     secretName: vault-ent-license
   extraEnvironmentVars:
     VAULT_CLIENT_TIMEOUT: 300s
-
-
+ui:
+  enabled: true
+  publishNotReadyAddresses: true
+  activeVaultPodOnly: false
+  serviceType: "LoadBalancer"
+  serviceNodePort: null
+  externalPort: 8200
+  targetPort: 8200
 
