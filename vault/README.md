@@ -13,6 +13,7 @@ This repo a fork from `https://github.com/hashicorp/learn-terraform-provision-ek
 # Get k8s cluster info
 
 `aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terraform output -raw cluster_name)`
+
 `kubectl cluster-info`
 
 # Deploy Vault 
