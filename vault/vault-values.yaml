@@ -13,6 +13,12 @@ server:
     secretName: vault-ent-license
   extraEnvironmentVars:
     VAULT_CLIENT_TIMEOUT: 300s
+  readinessProbe:
+    enabled: false
+    path: '/v1/sys/health?standbyok=true&perfstandbyok=true'
+  livenessProbe:
+    enabled: false
+    path: '/v1/sys/health?standbyok=true&perfstandbyok=true'
 ui:
   enabled: true
   publishNotReadyAddresses: true

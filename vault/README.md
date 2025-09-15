@@ -50,5 +50,6 @@ This repo a fork from `https://github.com/hashicorp/learn-terraform-provision-ek
 `terraform destroy`
 
 
-   
+# Notes
 
+If PVCs are showing up as unbound, run `kubectl patch storageclass gp2 -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'` to patch the StorageClass so that gp2 is the default for the cluster.
